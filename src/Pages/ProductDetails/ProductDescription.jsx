@@ -7,16 +7,16 @@ const ProductDescription = ({ productData }) => {
   return (
     <div className="md:flex items-center w-full border-2 rounded-3xl my-4 gap-16 p-8">
       <div className="w-full md:w-1/2">
-        <h4 className="text-xl uppercase font-semibold">Details</h4>
-        <p className="mt-4">{productData?.description}</p>
-        <p>
+        <h4 className="text-base md:text-xl uppercase font-semibold">Details</h4>
+        <p className="text-xs sm:text-sm md:text-base mt-4">{productData?.description}</p>
+        <p className="text-xs sm:text-sm md:text-base">
           Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
           ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
         </p>
-        <h4 className="text-xl uppercase font-semibold mt-4">
+        <h4 className="text-base md:text-xl uppercase font-semibold mt-4">
           Care Instruction
         </h4>
-        <p>
+        <p className="text-xs sm:text-sm md:text-base">
           We don’t like to label, but this one comes in handy. Follow the
           instructions on the label before you wash this product or give it to
           your mom – she knows how to do it.
@@ -28,7 +28,7 @@ const ProductDescription = ({ productData }) => {
             <MdEmojiTransportation className="w-8 h-8" />
             <TbIroningOff className="w-8 h-8" />
           </div>
-          <p className="mt-4">
+          <p className="text-xs sm:text-sm md:text-base my-4">
             <span className="font-semibold">Composition: </span>Our toy shop
             website is a treasure trove of playtime wonders, carefully curated
             to inspire and delight. From classic toys that have stood the test

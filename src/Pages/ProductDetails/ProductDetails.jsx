@@ -66,35 +66,35 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="my-container mb-10">
+    <div className="my-container my-4 px-4">
       <div className="md:flex items-center gap-10">
         <div className="md:w-[45%]">
           <img className="hover:scale-105 duration-[1500ms] rounded-sm" src={productData?.img} alt="Product Image" />
         </div>
         <div className="md:w-[55%]">
-          <h2 className="text-4xl font-medium">{productData?.product_name}</h2>
-          <h4 className="text-2xl my-2">${productData?.price}</h4>
-          <p className="text-gray-600">{productData?.description}</p>
+          <h2 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-medium mt-3">{productData?.product_name}</h2>
+          <h4 className="text-sm sm:text-base md:text-2xl my-1 sm:my-2">${productData?.price}</h4>
+          <p className="text-xs sm:text-sm md:text-base text-gray-600">{productData?.description}</p>
 
           <button
             onClick={() => saveCartProductToDb(productData)}
-            className="btn btn-sm btn-color border-none mt-4"
+            className="btn btn-xs sm:btn-sm btn-color text-[10px] sm:text-sm border-none mt-4"
           >
             Add To Cart
           </button>
 
           <div className="flex items-center gap-1 my-5">
-            <AiFillHeart className="text-sky-500 text-xl" />
-            <p className="text-sm uppercase">Add To Wishlist</p>
+            <AiFillHeart className="text-sky-500 sm:text-xl" />
+            <p className="text-xs sm:text-sm uppercase">Add To Wishlist</p>
           </div>
-          <h6 className="uppercase">SKU: {productData?.SKU}</h6>
-          <h6 className="my-1">Category: {productData?.product_category}</h6>
-          <div className="flex items-center gap-1">
+          <h6 className="text-xs sm:text-sm uppercase">SKU: {productData?.SKU}</h6>
+          <h6 className="text-xs sm:text-sm my-1">Category: {productData?.product_category}</h6>
+          <div className="flex items-center gap-1 text-xs sm:text-sm">
             <p>Tags:</p>
             <div className="flex items-center gap-1">
               {productData?.tags.map((item, index) => (
                 <p
-                  className="py-1 px-3 border rounded-sm text-sm uppercase"
+                  className="py-1 px-3 border rounded-sm text-[10px] sm:text-xs uppercase"
                   key={index}
                 >
                   {item}
@@ -108,19 +108,19 @@ const ProductDetails = () => {
       <div className="my-10">
         <div className="flex items-center justify-center gap-8">
           <button
-          className={`text-xl ${activeComponent === 'ProductDescription'? 'font-semibold': "font-normal"}`}
+          className={`text-sm sm:text-base md:text-xl ${activeComponent === 'ProductDescription'? 'font-semibold': "font-normal"}`}
             onClick={() => handleButtonClick("ProductDescription")}
           >
             Description
           </button>
           <button
-            className={`text-xl font-semibold ${activeComponent === 'ProductInformation'? 'font-semibold': "font-normal"}`}
+            className={`text-sm sm:text-base md:text-xl ${activeComponent === 'ProductInformation'? 'font-semibold': "font-normal"}`}
             onClick={() => handleButtonClick("ProductInformation")}
           >
             Additional Information
           </button>
           <button
-            className={`text-xl font-semibold ${activeComponent === 'ProductReview'? 'font-semibold': "font-normal"}`}
+            className={`text-sm sm:text-base md:text-xl ${activeComponent === 'ProductReview'? 'font-semibold': "font-normal"}`}
             onClick={() => handleButtonClick("ProductReview")}
           >
             Review
@@ -141,7 +141,7 @@ const ProductDetails = () => {
       </div>
 
       <div className="my-10">
-        <h4 className="text-2xl my-6 text-center">RELATED PRODUCTS</h4>
+        <h4 className="text-lg sm:text-2xl my-6 text-center">RELATED PRODUCTS</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mx-auto">
           {relatedProducts &&
             relatedProducts.length > 0 &&

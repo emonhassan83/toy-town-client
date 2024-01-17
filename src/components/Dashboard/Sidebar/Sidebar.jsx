@@ -24,7 +24,7 @@ const Sidebar = () => {
       <div className="bg-gray-100 text-gray-800 flex justify-between md:hidden">
         <div>
           <div className="block cursor-pointer p-4 font-bold">
-            <img className="w-40" src={logo} alt="" />
+            <img className="w-40" src={logo} alt="Image Logo" />
           </div>
         </div>
 
